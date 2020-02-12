@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component,Fragment,useState} from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Button,Container,Row,Col} from 'react-bootstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+      <Container>
+        <Row className='mt-5'>
+          <Col><h2 className="float-left">Breednder</h2></Col>
+          <Col xs='2'><Button className='btn-secondary rounded-pill'  block>Login</Button></Col>
+          <Col xs='2'><Button className='btn-secondary rounded-pill'  block>Register</Button></Col>
+        </Row>
+        <Row>
+          <Col><h1 className='text-center'>Swipe Right to make Your Pet happy</h1></Col>
+        </Row>
+        <Row>
+          <Col xs='3'></Col>
+          <Col><p className='text-center' lg='2'>by clicking enter, you agree to our terms, Learns how we process your data in our Privacy Policy and Cookies Policies</p></Col>
+          <Col xs='3'></Col>
+        </Row>
+      </Container>
+      </div>
     </div>
   );
 }
