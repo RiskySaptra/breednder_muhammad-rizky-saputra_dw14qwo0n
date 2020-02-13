@@ -1,0 +1,49 @@
+body{
+  background: url('https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+}
+
+.landing h1{
+  padding-top: 130px;
+  color: aliceblue;
+
+  text-shadow: 1px 1px grey;
+
+}
+.landing h2{
+  color: aliceblue;
+}
+
+.landing p{
+  position: relative;
+  padding-top: 280px;
+  color: aliceblue;
+}
+.boxLeft{
+  background: aliceblue;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 30%;
+  height: 100%;
+}
+.boxRight{
+  background: lightgray;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 70%;
+  height: 70%;
+}
+.boxFooter{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 0px;
+  bottom: 0px;
+  width: 70%;
+  height: 7%;
+}
+  
