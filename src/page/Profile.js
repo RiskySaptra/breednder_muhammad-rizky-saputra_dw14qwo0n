@@ -2,6 +2,8 @@ import React, {Component,Fragment,useState} from 'react';
 
 import data from "../profile-data.js";
 
+import PaymentModal from '../components/PaymentModal';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing.css';
 import {Nav,Navbar,NavDropdown,Form,FormControl, CardGroup, Container,FormGroup, Row, Col,Carousel} from 'react-bootstrap'
@@ -29,7 +31,7 @@ class  Profile extends Component {
                   height="30"
                   className="d-inline-block align-center round-image"
                 />{' '}
-                Afdool
+                Profile Pet
               </Navbar.Brand>
             </Navbar>
             <div className='body'>
@@ -47,7 +49,7 @@ class  Profile extends Component {
                   <p1>Phone</p1>
                 </div>
                 <div className='col-5'>
-                  <p1>085250552211</p1>
+                  <p1>0852 5055 2211</p1>
                 </div>
               </div>
               <h2>Discovery Settings</h2>
@@ -58,7 +60,7 @@ class  Profile extends Component {
                     <div className='col-9'><p1>Maximum Distance</p1></div>
                     <div className='col-3'><p1>10 KM</p1></div>
                   </Row>
-                  <Form.Control type="range" min='1' max='100' className='slider'/>
+                  <Form.Control type="range" min='0' max='100'/>
                   <FormGroup>
                   <Form.Label>Age</Form.Label>
                     <Form.Control as="select">
@@ -85,7 +87,7 @@ class  Profile extends Component {
             </div>
           </div>
           </Container>
-          <Button className='rounded-pill float-right' variant="light" >Add Pet</Button>
+          <PaymentModal/>
           <div className='boxRight '>
             <Carousel>
               <Carousel.Item>
@@ -107,7 +109,7 @@ class  Profile extends Component {
               <p className='abt'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
               </p>
               <div className='footer'>
-                <Button className='rounded-pill' variant="dark" block>edit</Button>
+                <Button className='rounded-pill' variant="dark" href='/edit-profile'block>Edit</Button>
               </div>
             </Container>
           </div>
