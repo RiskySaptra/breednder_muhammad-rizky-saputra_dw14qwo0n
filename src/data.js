@@ -1,145 +1,109 @@
+
 export default [
   {
-    pics: [
-      "https://images.unsplash.com/photo-1520024146169-3240400354ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    ],
-    name: "Heather",
-    age: 32,
+    pics: ["/1.jpeg"],
+    name: "Great Grey Wolf Sif",
+    gender: 32,
     distance: "4 miles away",
-    text:
-      "My nickname is Gilette because I'm the best a man can get. Also I will cut you."
+    breeder:'Risky'
   },
   {
-    pics: [
-      "https://images.unsplash.com/photo-1522263842439-347f062b8475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
+    pics: ["/2.jpeg"],
     name: "Chloe",
-    age: 18,
+    gender: 18,
     distance: "1 mile away",
-    text: "The C and the L are silent."
+    breeder: 'Afdool'
   },
   {
-    pics: [
-      "https://images.unsplash.com/photo-1539758462369-43adaa19bc1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Helen",
-    age: 19,
+    pics: ["/3.jpeg"],
+    name: "Olen",
+    gender: 19,
     distance: "3 miles away",
-    text: "Aspiring MILF"
+    breeder: 'Bambang'
   },
   {
-    pics: [
-      "https://images.unsplash.com/photo-1514924801778-1db0aba75e9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Savannah",
-    age: 29,
-    distance: "3 miles away",
-    text: "A little known fact is that I cover about 40% of Africa."
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1456885284447-7dd4bb8720bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-      "https://images.unsplash.com/photo-1532635270-c09dac425ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Jane",
-    age: 22,
-    distance: "2 miles away",
-    text:
-      "On the first date I will carve our initials in a tree. It's the most romantic way to let you know I have a knife."
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1520024146169-3240400354ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    ],
-    name: "Heather",
-    age: 32,
+    pics: ["/4.jpeg"],
+    name: "Birb",
+    gender: 32,
     distance: "4 miles away",
-    text:
-      "My nickname is Gilette because I'm the best a man can get. Also I will cut you."
+    breeder:'Asrool'
   },
   {
-    pics: [
-      "https://images.unsplash.com/photo-1522263842439-347f062b8475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Chloe",
-    age: 18,
+    pics: ["/5.jpeg"],
+    name: "Mr.Clean",
+    gender: 18,
     distance: "1 mile away",
-    text: "The C and the L are silent."
+    breeder: 'Dave'
   },
   {
-    pics: [
-      "https://images.unsplash.com/photo-1539758462369-43adaa19bc1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Helen",
-    age: 19,
+    pics: ["/6.jpeg"],
+    name: "Chonk",
+    gender: 19,
     distance: "3 miles away",
-    text: "Aspiring MILF"
+    breeder: 'Wanda'
   },
   {
-    pics: [
-      "https://images.unsplash.com/photo-1514924801778-1db0aba75e9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Savannah",
-    age: 29,
+    pics: ["/7.jpeg"],
+    name: "Maya",
+    gender: 32,
+    distance: "4 miles away",
+    breeder:'Felix'
+  },
+  {
+    pics: ["/8.jpeg"],
+    name: "Persik",
+    gender: 18,
+    distance: "1 mile away",
+    breeder:'Tzu Yu'
+  },
+  {
+    pics: ["/9.jpeg"],
+    name: "Mili",
+    gender: 19,
     distance: "3 miles away",
-    text: "A little known fact is that I cover about 40% of Africa."
+    breeder: 'Ahchmad'
+  },
+  {
+    pics: ["/10.jpeg"],
+    name: "Bernard",
+    gender: 19,
+    distance: "3 miles away",
+    breeder: 'Soona'
+  },
+  {
+    pics: ["/11.jpeg"],
+    name: "El-Tigre",
+    gender: 19,
+    distance: "3 miles away",
+    breeder: 'Hesa'
+  },
+  {
+    pics: ["/12.jpeg"],
+    name: "Mike",
+    gender: 19,
+    distance: "3 miles away",
+    breeder: 'Muchacho'
+  },
+  {
+    pics: ["/13.jpeg"],
+    name: "Angy",
+    gender: 19,
+    distance: "3 miles away",
+    breeder: 'Stan'
+  },
+  {
+    pics: ["/14.jpeg"],
+    name: "Lil-boi",
+    gender: 19,
+    distance: "3 miles away",
+    breeder: 'Somad'
+  },
+  {
+    pics: ["/15.jpeg"],
+    name: "Night",
+    gender: 19,
+    distance: "3 miles away",
+    breeder: 'Edgy Boi'
   }
-  ,
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1539758462369-43adaa19bc1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Helen",
-    age: 19,
-    distance: "3 miles away",
-    text: "Aspiring MILF"
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1514924801778-1db0aba75e9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Savannah",
-    age: 29,
-    distance: "3 miles away",
-    text: "A little known fact is that I cover about 40% of Africa."
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1456885284447-7dd4bb8720bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-      "https://images.unsplash.com/photo-1532635270-c09dac425ca9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Jane",
-    age: 22,
-    distance: "2 miles away",
-    text:
-      "On the first date I will carve our initials in a tree. It's the most romantic way to let you know I have a knife."
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1520024146169-3240400354ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-    ],
-    name: "Heather",
-    age: 32,
-    distance: "4 miles away",
-    text:
-      "My nickname is Gilette because I'm the best a man can get. Also I will cut you."
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1522263842439-347f062b8475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Chloe",
-    age: 18,
-    distance: "1 mile away",
-    text: "The C and the L are silent."
-  },
-  {
-    pics: [
-      "https://images.unsplash.com/photo-1539758462369-43adaa19bc1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80"
-    ],
-    name: "Helen",
-    age: 19,
-    distance: "3 miles away",
-    text: "Aspiring MILF"
-  }
+
 ];

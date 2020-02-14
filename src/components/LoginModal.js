@@ -3,7 +3,7 @@ import React, {Fragment,useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import { Button,Modal,Form} from 'react-bootstrap';
+import { Button,Modal,Form, Container} from 'react-bootstrap';
 import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 
 export default function LoginModal() {
@@ -31,11 +31,9 @@ export default function LoginModal() {
           </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Link to="/index">
-              <Button className='rounded-pill' variant="secondary" type="submit" size="sm">
+              <Button className='rounded-pill' variant="secondary" type="submit" size="sm" href='/index' block>
                 Login
               </Button>
-            </Link>
           </Modal.Footer>
         </Modal>
       </Fragment>

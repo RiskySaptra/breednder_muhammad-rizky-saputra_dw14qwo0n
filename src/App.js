@@ -1,14 +1,18 @@
 import React from "react";
-import Landing from './page/Landing'
-import Index from './page/Index'
+import Landing from './page/Landing';
+import Index from './page/Index';
+import Profile from './page/Profile';
 
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 export default function App() {
   return (
     <Router>
       <div>
         <Switch>
+          <Route path="/profile">
+            <Profile />
+          </Route>
           <Route path="/index">
             <Index />
           </Route>

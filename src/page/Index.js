@@ -5,23 +5,26 @@ import '../styles/Landing.css';
 
 import Deck from "../components/Deck";
 import data from "../data.js";
-import {Nav,Navbar,NavDropdown,Form,FormControl, CardGroup} from 'react-bootstrap'
+import {Nav,Navbar,NavDropdown,Form,FormControl, CardGroup, Container} from 'react-bootstrap'
 
 import { Image,Card,Button,CardDeck } from 'react-bootstrap';
+
+import { BrowserRouter as Link } from "react-router-dom";
 
 class  Index extends Component {
     render(){
       return (
         <div className='container'>
             <div className='boxLeft'>
-            <Navbar bg="dark" variant="dark" className='sticky-top'>
-              <Navbar.Brand href="#home">
+            <div className='sticky-top bot-mar'>
+            <Navbar bg="dark" variant="dark" className='' >
+              <Navbar.Brand href="/profile">
                 <img
                   alt=""
-                  src="/logo192.png"
+                  src="/profile.jpeg"
                   width="30"
                   height="30"
-                  className="d-inline-block align-top"
+                  className="d-inline-block align-center round-image" 
                 />{' '}
                 Afdool
               </Navbar.Brand>
@@ -29,16 +32,30 @@ class  Index extends Component {
             <Navbar className='sticky'>
               <Navbar.Brand ><u>Match</u></Navbar.Brand>
             </Navbar>
-            <div className='text-center'>
+            </div>
+            <div className='image-text'>
+              
               {data.map(item => (
-                <img className='box-image' src={item.pics} />
+                <>
+                <img className='box-image' key={item} src={item.pics} />
+                </>
               ))}
+              
             </div>
             </div>
             <div id='s' className='boxRight test'>
               <Deck/>
             </div>
-            <div className='boxFooter'>
+            <div className='boxFooter text-center'>
+              <Container fluid>
+                <Button variant="dark">Navigasi</Button>{' '}
+                <Button variant="dark">Navigasi</Button>{' '}
+                <Button variant="dark">Navigasi</Button>{' '}
+                <Button variant="dark">Navigasi</Button>{' '}
+                <Button variant="dark">Navigasi</Button>{' '}
+                <Button variant="dark">Navigasi</Button>{' '}
+                
+              </Container>
             </div>
         </div>
       );
