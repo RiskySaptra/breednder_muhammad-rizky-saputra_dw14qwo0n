@@ -5,6 +5,7 @@ import '../styles/Landing.css';
 
 import Deck from "../components/Deck";
 import data from "../data.js";
+import {Nav,Navbar,NavDropdown,Form,FormControl, CardGroup} from 'react-bootstrap'
 
 import { Image,Card,Button,CardDeck } from 'react-bootstrap';
 
@@ -13,34 +14,37 @@ class  Index extends Component {
       return (
         <div className='container'>
             <div className='boxLeft'>
-              <div className='card'>
-                <div className='card-header'>
-                  Header
-                </div>
-                <div className='card-body'>
-                  <div className='row'>
-                    <div className='col-4'>
-                      <Card className="bg-dark text-white">
-
-                      </Card>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <Navbar bg="dark" variant="dark" className='sticky-top'>
+              <Navbar.Brand href="#home">
+                <img
+                  alt=""
+                  src="/logo192.png"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                />{' '}
+                Afdool
+              </Navbar.Brand>
+            </Navbar>
+            <div className='text-center'>
+              {data.map(item => (
+                <img className='box-image' src={item.pics} />
+              ))}
+            </div>
             </div>
             <div id='s' className='boxRight test'>
               <Deck/>
             </div>
             <div className='boxFooter'>
-              <p>
-                beraks
-              </p>
-
+              <div className='text-center'>
+                <button>berak</button><button>berak</button><button>berak</button>
+              </div>
             </div>
         </div>
       );
     }
-    
+
   }
-  
+
+
   export default Index;

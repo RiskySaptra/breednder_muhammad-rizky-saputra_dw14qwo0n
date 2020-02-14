@@ -21,6 +21,12 @@ body{
   padding-top: 280px;
   color: aliceblue;
 }
+.box-image{
+  height: 130px;
+  width: 100px;
+  margin: 10px;
+  border-radius: 2px;
+}
 .boxLeft{
   background: aliceblue;
   position: absolute;
@@ -28,6 +34,7 @@ body{
   top: 0px;
   width: 30%;
   height: 100%;
+  overflow-y: auto;
 }
 .boxRight{
   background: lightgray;
@@ -40,10 +47,8 @@ body{
 .boxFooter{
   position: absolute;
   align-items: center;
-  justify-content: center;
   right: 0px;
   bottom: 0px;
   width: 70%;
   height: 7%;
 }
-  

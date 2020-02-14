@@ -9,14 +9,15 @@ import "../styles/Deck.css";
 
 const to = i => ({
   x: 0,
-  y: i ,
+  y: i * 0,
+  scale: 1,
   delay: i * 100
 });
-const from = i => ({ rot: 0, scale: 1, y: 0 });
+const from = i => ({ rot: 0, scale: 1.5, y: -1000 });
 
 const trans = (r, s) =>
-  `perspective(0) rotateX(0) rotateY(${r /
-    0}deg) rotateZ(${r}deg) scale(${s})`;
+  `perspective(0) rotateX(30deg) rotateY(${r /
+    10}deg) rotateZ(${r}deg) scale(${s})`;
 
 function Deck() {
   const [gone] = useState(() => new Set());
@@ -47,12 +48,9 @@ function Deck() {
 
         const x = isGone ? (200 + window.innerWidth) * dir : down ? xDelta : 0;
 
-        const rot = xDelta / 100 + (isGone ? dir * 10 * velocity : 0);
-
         const scale = down ? 1.1 : 1;
         return {
           x,
-          rot,
           scale,
           delay: undefined,
           config: { friction: 50, tension: down ? 800 : isGone ? 200 : 500 }
