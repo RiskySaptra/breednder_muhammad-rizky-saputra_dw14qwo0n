@@ -14,7 +14,7 @@ import { BrowserRouter as Link } from "react-router-dom";
 class  Index extends Component {
     render(){
       return (
-        <div className='container'>
+        <div className='text-center'>
             <div className='boxLeft'>
             <div className='sticky-top bot-mar'>
             <Navbar bg="dark" variant="dark" className='' >
