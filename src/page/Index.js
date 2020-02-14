@@ -24,7 +24,7 @@ class  Index extends Component {
                   src="/profile.jpeg"
                   width="30"
                   height="30"
-                  className="d-inline-block align-center round-image" 
+                  className="d-inline-block align-center round-image"
                 />{' '}
                 Afdool
               </Navbar.Brand>
@@ -34,16 +34,16 @@ class  Index extends Component {
             </Navbar>
             </div>
             <div className='image-text'>
-              
+
               {data.map(item => (
                 <>
                 <img className='box-image' key={item} src={item.pics} />
                 </>
               ))}
-              
+
             </div>
             </div>
-            <div id='s' className='boxRight test'>
+            <div id='s' className='boxRight-index test'>
               <Deck/>
             </div>
             <div className='boxFooter text-center'>
@@ -54,7 +54,7 @@ class  Index extends Component {
                 <Button variant="dark">Navigasi</Button>{' '}
                 <Button variant="dark">Navigasi</Button>{' '}
                 <Button variant="dark">Navigasi</Button>{' '}
-                
+
               </Container>
             </div>
         </div>

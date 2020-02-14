@@ -1,8 +1,10 @@
 import React, {Component,Fragment,useState} from 'react';
 
+import data from "../profile-data.js";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing.css';
-import {Nav,Navbar,NavDropdown,Form,FormControl, CardGroup, Container,FormGroup, Row, Col} from 'react-bootstrap'
+import {Nav,Navbar,NavDropdown,Form,FormControl, CardGroup, Container,FormGroup, Row, Col,Carousel} from 'react-bootstrap'
 
 import { Image,Card,Button,CardDeck } from 'react-bootstrap';
 
@@ -25,7 +27,7 @@ class  Profile extends Component {
                   src="/profile.jpeg"
                   width="30"
                   height="30"
-                  className="d-inline-block align-center round-image" 
+                  className="d-inline-block align-center round-image"
                 />{' '}
                 Afdool
               </Navbar.Brand>
@@ -83,11 +85,16 @@ class  Profile extends Component {
             </div>
           </div>
           </Container>
-          <div id='x'className='boxRight'>
-            <div className='box-profile'>
-            <Card>
-              berakss
-            </Card>
+          <div className='boxRight '>
+            <Carousel>
+              <Carousel.Item>
+              {data.map(item => (
+                <img className='box-image-profile' key={item} src={item.pics} />
+              ))}
+              </Carousel.Item>
+            </Carousel>
+            <div className='container'>
+            <h1>Mr.Doug</h1>
             </div>
           </div>
           <div className='boxFooter text-center'>
@@ -95,7 +102,7 @@ class  Profile extends Component {
       </div>
     );
   }
-  
+
 }
 
 export default Profile;
