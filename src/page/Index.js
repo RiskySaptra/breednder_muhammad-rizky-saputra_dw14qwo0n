@@ -26,6 +26,9 @@ class  Index extends Component {
                 Afdool
               </Navbar.Brand>
             </Navbar>
+            <Navbar className='sticky'>
+              <Navbar.Brand ><u>Match</u></Navbar.Brand>
+            </Navbar>
             <div className='text-center'>
               {data.map(item => (
                 <img className='box-image' src={item.pics} />
@@ -36,9 +39,6 @@ class  Index extends Component {
               <Deck/>
             </div>
             <div className='boxFooter'>
-              <div className='text-center'>
-                <button>berak</button><button>berak</button><button>berak</button>
-              </div>
             </div>
         </div>
       );
