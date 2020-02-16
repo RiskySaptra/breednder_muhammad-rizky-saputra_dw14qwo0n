@@ -11,7 +11,7 @@ export default function LoginModal() {
     return (
       <Fragment>
         <Button onClick={() => setRegister(true)} className='default-btn' size="sm" variant="dark">Register</Button>
-        <Modal size="sm" show={Register} onHide={() => setRegister(false)} scrollable centered>
+        <Modal size="sm" show={Register} onHide={() => setRegister(false)} style={{maxHeight:"600px"}} scrollable centered>
         <Modal.Header closeButton>
           <Modal.Title id="modal-sizes-title-sm">
             Register

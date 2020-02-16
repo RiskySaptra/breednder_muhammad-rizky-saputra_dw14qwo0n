@@ -16,14 +16,12 @@ class  Landing extends Component {
   render(){
     return (
       <>
-        <Navbar variant="dark">
-          <Navbar.Brand href="#home"><h2><b>BreedNder</b></h2></Navbar.Brand>
-        <Nav className="mr-auto">
-        </Nav>
-        <Form inline>
-          <LoginModal/>
-          <RegisterModal/>
-        </Form>
+        <Navbar variant="dark" style={{paddingLeft:"5%",paddingRight: "5%",paddingTop:"2%"}}>
+            <Navbar.Brand href="#home"><h2><b>BreedNder</b></h2></Navbar.Brand>
+          <Nav className="mr-auto"></Nav>
+            <Nav>
+              <LoginModal/> <RegisterModal/>
+            </Nav>
         </Navbar>
         <div className='flex-col'>
             <div className='ln'>
