@@ -10,7 +10,7 @@ export default function LoginModal() {
   const [Login, setLogin] = useState(false);
     return (
       <Fragment>
-        <Button onClick={() => setLogin(true)} className='btn-secondary'>Login</Button>
+        <Button onClick={() => setLogin(true)} className='default-btn' size='sm' variant="outline-light">Login</Button>
         <Modal size="sm" show={Login} onHide={() => setLogin(false)} centered>
           <Modal.Header closeButton>
             <Modal.Title id="modal-sizes-title-sm">
@@ -31,7 +31,7 @@ export default function LoginModal() {
           </Form>
           </Modal.Body>
           <Modal.Footer>
-              <Button className='rounded-pill' variant="secondary" type="submit" size="sm" href='/index' block>
+              <Button className='.default-btn' variant="secondary" type="submit" size="sm" href='/index' block>
                 Login
               </Button>
           </Modal.Footer>

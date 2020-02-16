@@ -1,7 +1,8 @@
 import React, {Component,Fragment,useState} from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/Landing.css'
+import '../styles/Component.css'
+
 
 import LoginModal from '../components/LoginModal';
 import RegisterModal from '../components/RegisterModal';
@@ -16,15 +17,22 @@ class  Landing extends Component {
     return (
       <>
         <Navbar variant="dark">
-          <Navbar.Brand href="#home"><h2>BreedNder</h2></Navbar.Brand>
+          <Navbar.Brand href="#home"><h2><b>BreedNder</b></h2></Navbar.Brand>
         <Nav className="mr-auto">
         </Nav>
         <Form inline>
-          <Button style={{width: "120px",margin: "15px"}}variant="secondary">Login</Button>
-          <Button style={{width: "120px"}}variant="secondary">Register</Button>
+          <LoginModal/>
+          <RegisterModal/>
         </Form>
         </Navbar>
-
+        <div className='flex-col'>
+            <div className='ln'>
+              <h1 className='ln'>Swipe <b>Right.</b> to make Your Pet <b>Happy</b></h1>
+            </div>
+            <div className='ln'>
+              <p className='ln' lg='2'>By clicking enter, you agree to <a href='#'>Our terms</a>, Learns how we process your data in our <a href='#'>Privacy policy</a> and <a href='#'>Cookies policies</a>.</p>
+            </div>
+        </div>
       </>
     );
   }
