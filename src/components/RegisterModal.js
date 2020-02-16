@@ -10,7 +10,7 @@ export default function LoginModal() {
   const [Register, setRegister] = useState(false);
     return (
       <Fragment>
-        <Button onClick={() => setRegister(true)} className='btn-secondary rounded-pill'  block>Register</Button>
+        <Button onClick={() => setRegister(true)} className='btn-secondary'>Register</Button>
         <Modal size="sm" show={Register} onHide={() => setRegister(false)} scrollable centered>
         <Modal.Header closeButton>
           <Modal.Title id="modal-sizes-title-sm">

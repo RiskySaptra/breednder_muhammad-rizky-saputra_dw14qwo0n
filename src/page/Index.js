@@ -48,12 +48,12 @@ class  Index extends Component {
             </div>
             <div className='boxFooter text-center'>
               <Container fluid>
-                <Button variant="dark">Navigasi</Button>{' '}
-                <Button variant="dark">Navigasi</Button>{' '}
-                <Button variant="dark">Navigasi</Button>{' '}
-                <Button variant="dark">Navigasi</Button>{' '}
-                <Button variant="dark">Navigasi</Button>{' '}
-                <Button variant="dark">Navigasi</Button>{' '}
+                <Button variant="dark">Hide</Button>{' '}
+                <Button variant="dark">No</Button>{' '}
+                <Button variant="dark">Yes</Button>{' '}
+                <Button variant="dark">Open Profile</Button>{' '}
+                <Button variant="dark">Close Profile</Button>{' '}
+                <Button variant="dark">Next</Button>{' '}
 
               </Container>
             </div>

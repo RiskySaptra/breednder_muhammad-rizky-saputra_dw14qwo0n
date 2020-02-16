@@ -10,7 +10,7 @@ export default function PaymentModal() {
   const [Payment, setPayment] = useState(false);
     return (
       <Fragment>
-        <Button onClick={() => setPayment(true)} className='rounded-pill float-right'>Add Pet</Button>
+        <Button onClick={() => setPayment(true)} variant='dark' className='rounded-pill btn-add-pet'>Add Pet</Button>
         <Modal className='text-center' show={Payment} onHide={() => setPayment(false)} scrollable centered>
         <h1>Premium</h1>
         <h3>Upgrade Breednder mu dan nikmati fitur-fitur <b>PRO</b></h3>

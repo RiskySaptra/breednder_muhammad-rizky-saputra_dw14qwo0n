@@ -18,8 +18,8 @@ import { BrowserRouter as Link } from "react-router-dom";
 class  EditProfile extends Component {
   render(){
     return (
-      <div className='container'>
-        Edit Profil
+      <div>
+        <h1>EDIT PROFILE </h1>
       </div>
     );
   }
