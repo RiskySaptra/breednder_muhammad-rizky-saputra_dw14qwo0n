@@ -32,3 +32,13 @@ img{
 .react-icons {
   margin-right: 7px;
 }
+.sparator{
+  color: white;
+  background: grey;
+  display: flex;
+  flex-direction: column;
+  padding: 14px
+}
+.for{
+  padding: 15px
+}

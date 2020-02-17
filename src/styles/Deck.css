@@ -1,4 +1,15 @@
+#x{
+  background: lightgrey;
+  position: fixed;
+  overflow: hidden;
+  width: 70%;
+  height: 100%;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 #s{
+  background: lightgrey;
   position: fixed;
   overflow: hidden;
   width: 70%;
