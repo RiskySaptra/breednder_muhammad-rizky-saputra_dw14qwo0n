@@ -4,10 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing.css';
 
 import Deck from "../components/Deck";
+import PaymentModal from '../components/PaymentModal';
+
 import data from "../data.js";
-import {Button,Navbar,Form,FormGroup,Row} from 'react-bootstrap'
-import { FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCaretSquareDown,FaRegSquare } from 'react-icons/fa';
-import { IoIosArrowBack } from 'react-icons/io';
+import {Button,Navbar,Form,FormGroup,Row,Carousel,Container} from 'react-bootstrap'
+import { FaTransgender,FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCaretSquareDown,FaRegSquare } from 'react-icons/fa';
+import { IoIosArrowBack,IoIosPerson } from 'react-icons/io';
+import { MdLocationOn,MdPhone } from 'react-icons/md';
+
 import { BrowserRouter as Link } from "react-router-dom";
 
 class  Index extends Component {
@@ -80,10 +84,31 @@ class  Index extends Component {
               </Form>
               </div>
             </div>
-
-            </div>
+          </div>
           <div id="x" className='boxRight-profile'>
-
+            <PaymentModal/>
+            <div className="box-profile">
+            <div>
+              <Carousel>
+                <Carousel.Item>
+                  <img className='box-image-profile'src='/profile.jpeg'  style={{maxHeight:'400px'}}/>
+                </Carousel.Item>
+              </Carousel>
+            </div>
+            <div className="for">
+            <Row>
+              <div className='col-9'><h3><b>Mr.Doug</b></h3></div>
+              <div className='col-3'><h4>DOG</h4></div>
+            </Row>
+                <p><IoIosPerson style={{fontSize:'1.2em'}}/> Breeder : Risky</p>
+                <p><MdLocationOn style={{fontSize:'1.2em'}}/> 10 KM from here</p>
+                <p><FaTransgender style={{fontSize:'1.2em'}}/> Male - Adult</p>
+                <p><MdPhone style={{fontSize:'1.2em'}}/> Phone Breeder : 0821 9796 5530</p>
+                <h3 style={{margin:"5px"}}>About</h3>
+                <p className='abt' style={{margin:"5px"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                <Button className='btn-default fixed' variant="dark" href='/edit-profile'block>Edit</Button>
+            </div>
+            </div>
           </div>
         </>
       );

@@ -10,7 +10,7 @@ import { FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCare
 import { BrowserRouter as Link } from "react-router-dom";
 
 class  Index extends Component {
-  state = { showing: true };
+  state = { showing: true,text : "Hide" };
     render(){
       const { showing } = this.state;
       return (
@@ -45,8 +45,8 @@ class  Index extends Component {
               <Deck/>
               <div className='boxRight-body'>
                 <div><div className="buttons"><img src="./refresh.png"/></div></div>
-                <div><div className="buttons" style={{width:"80px",height:"80px"}}><img src="./nope.png"/></div></div>
-                <div><div className="buttons" style={{width:"80px",height:"80px"}}><img src="./luv.png"/></div></div>
+                <div><div className="buttons" style={{width:"80px",height:"80px"}}><img style={{width:"45px",height:"45px"}}src="./nope.png"/></div></div>
+                <div><div className="buttons" style={{width:"80px",height:"80px"}}><img style={{width:"60px",height:"60px"}}src="./luv.png"/></div></div>
                 <div><div className="buttons"><img src="./lightning.png"/></div></div>
               </div>
               <div className='boxRight-Footer'>

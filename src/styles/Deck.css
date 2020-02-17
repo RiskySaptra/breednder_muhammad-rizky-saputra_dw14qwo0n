@@ -1,5 +1,4 @@
 #x{
-  background: lightgrey;
   position: fixed;
   overflow: hidden;
   width: 70%;
@@ -31,7 +30,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   width: 330px;
-  height: 400px;
+  height: 450px;
   will-change: transform;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(50, 50, 73, 0.4),
@@ -45,14 +44,4 @@
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-}
-.carousel-indicators li{
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-  position: fixed;
-  width: 90%;
-}
-.right.carousel-control, .left.carousel-control li{
-    display: none;
 }
