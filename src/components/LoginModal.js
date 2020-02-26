@@ -31,9 +31,12 @@ export default function LoginModal() {
           </Form>
           </Modal.Body>
           <Modal.Footer>
-              <Button className='.default-btn' variant="secondary" type="submit" size="sm" href='/index' block>
+            <Link to="/index">
+              <Button className='.default-btn' variant="secondary" type="submit" size="sm" block>
                 Login
               </Button>
+            </Link>
+              
           </Modal.Footer>
         </Modal>
       </Fragment>
