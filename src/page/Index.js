@@ -7,7 +7,7 @@ import Deck from "../components/Deck";
 import data from "../data.js";
 import {Button,Navbar} from 'react-bootstrap'
 import { FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCaretSquareDown,FaRegSquare } from 'react-icons/fa';
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Link,NavLink } from "react-router-dom";
 
 class  Index extends Component {
   state = { showing: true,text : "Hide" };
@@ -18,7 +18,8 @@ class  Index extends Component {
           <div className='boxLeft-index'>
             <div className='sticky-top' style={{background:"white"}}>
             <Navbar bg="dark" variant="dark" className=''>
-              <Navbar.Brand href="/profile">
+            <NavLink to="/profile" activeClassName="active">
+              <Navbar.Brand>
                 <img
                   alt=""
                   src="/profile.jpeg"
@@ -28,6 +29,7 @@ class  Index extends Component {
                 />{' '}
                 <b>Mr. Doug</b>
               </Navbar.Brand>
+              </NavLink>
             </Navbar>
             <Navbar className='sticky'>
               <Navbar.Brand ><u>Match</u></Navbar.Brand>

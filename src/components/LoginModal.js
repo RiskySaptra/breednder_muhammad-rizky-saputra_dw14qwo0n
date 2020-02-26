@@ -31,7 +31,7 @@ export default function LoginModal() {
           </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Link to="/index">
+            <Link to="/index" style={{flex:1.5}}>
               <Button className='.default-btn' variant="secondary" type="submit" size="sm" block>
                 Login
               </Button>
