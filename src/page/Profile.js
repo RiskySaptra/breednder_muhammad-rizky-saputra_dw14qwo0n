@@ -1,18 +1,14 @@
-import React, {Component,Fragment,useState} from 'react';
+import React, {Component} from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing.css';
 
-import Deck from "../components/Deck";
 import PaymentModal from '../components/PaymentModal';
 
-import data from "../data.js";
-import {Button,Navbar,Form,FormGroup,Row,Carousel,Container} from 'react-bootstrap'
-import { FaTransgender,FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCaretSquareDown,FaRegSquare } from 'react-icons/fa';
+import {Button,Navbar,Form,FormGroup,Row,Carousel} from 'react-bootstrap'
+import { FaTransgender} from 'react-icons/fa';
 import { IoIosArrowBack,IoIosPerson } from 'react-icons/io';
 import { MdLocationOn,MdPhone } from 'react-icons/md';
-
-import { BrowserRouter as Link } from "react-router-dom";
 
 class  Index extends Component {
     render(){

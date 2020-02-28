@@ -1,18 +1,26 @@
-import React, {Component,Fragment,useState} from 'react';
+import React, {Component} from 'react';
+
+// redux
+import { connect } from "react-redux";
+//action
+import { getUserPets } from "../_actions/pet";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Landing.css';
 
 import Deck from "../components/Deck";
-import data from "../data.js";
 import {Button,Navbar} from 'react-bootstrap'
-import { FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCaretSquareDown,FaRegSquare } from 'react-icons/fa';
-import { BrowserRouter as Link } from "react-router-dom";
+import { FaRegCaretSquareLeft,FaRegCaretSquareRight,FaRegCaretSquareUp,FaRegCaretSquareDown} from 'react-icons/fa';
 
 class  Index extends Component {
-  state = { showing: true,text : "Hide" };
+  componentDidMount() {
+    this.props.getUserPets();
+  }
+  state = { showing: true, text : true };
     render(){
-      const { showing } = this.state;
+      const { showing,text } = this.state;
+      const { pet } = this.props;
+      console.log("yoooooo",pet.data);
       return (
         <>
           <div className='boxLeft-index'>
@@ -21,25 +29,24 @@ class  Index extends Component {
               <Navbar.Brand href="/profile">
                 <img
                   alt=""
-                  src="/profile.jpeg"
+                  src="https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty-300x240.jpg"
                   width="30"
                   height="30"
                   className="d-inline-block align-center round-image"
+                  alt={pet.data.photo}
                 />{' '}
-                <b>Mr. Doug</b>
+                <b>{pet.data.name}</b>
               </Navbar.Brand>
             </Navbar>
             <Navbar className='sticky'>
               <Navbar.Brand ><u>Match</u></Navbar.Brand>
             </Navbar>
           </div>
-          <div className=''>
-            {data.map(item => (
-              <>
-              <img className='box-image' key={item} src={item.pics} />
-              </>
+          {/* <div className=''>
+            {dataD.map((item,index) => (
+              <img className='box-image' key={index} src={item.pics} />
             ))}
-          </div>
+          </div> */}
           </div>
           <div id='s' className='boxRight-index'>
               <Deck/>
@@ -50,7 +57,7 @@ class  Index extends Component {
                 <div><div className="buttons"><img src="./lightning.png"/></div></div>
               </div>
               <div className='boxRight-Footer'>
-                <div style={{flex:2,maxWidth:"200px"}}><Button onClick={() => this.setState({ showing: !showing })} size="sm"variant="secondary btn-pill"block><b>Hide</b></Button></div>
+                <div style={{flex:2,maxWidth:"200px"}}><Button onClick={() => this.setState({ showing: !showing, text: !text })} size="sm"variant="secondary btn-pill"block><b>{(text ? 'Hide' : 'Show')}</b></Button></div>
                   <div style={{flex:10,display: (showing ? 'flex' : 'none')}}>
                       <div style={{flex:1.5}}><FaRegCaretSquareLeft size="2em" className="react-icons"/><b>NO</b></div>
                       <div style={{flex:1.5}}><FaRegCaretSquareRight size="2em" className="react-icons"/><b>YES</b></div>
@@ -67,5 +74,19 @@ class  Index extends Component {
 
   }
 
-
-  export default Index;
+  const mapStateToProps = state => {
+    return {
+      // species: state.species,
+      auth: state.auth,
+      pet: state.pet
+    };
+  };
+  
+  const mapDispatchToProps = dispatch => {
+    return {
+      // getPets: () => dispatch(getPets())
+      getUserPets: () => dispatch(getUserPets())
+    };
+  };
+  
+  export default connect(mapStateToProps,mapDispatchToProps)(Index);

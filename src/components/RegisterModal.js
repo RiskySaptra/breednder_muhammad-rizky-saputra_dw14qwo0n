@@ -1,17 +1,73 @@
-import React, {Fragment,useState} from 'react';
+import React, {Fragment} from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Button,Modal,Form,Container} from 'react-bootstrap';
-import { BrowserRouter as Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { Button,Modal,Form} from 'react-bootstrap';
+// action
+import { getSpecies } from "../_actions/species";
+import {register} from "../_actions/auth"
 
 
-export default function LoginModal() {
-  const [Register, setRegister] = useState(false);
+class RegisterModal extends React.Component {
+  componentDidMount() {
+    this.props.getSpecies();
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isopen: false,
+      //spesies: [],
+      selectedSpecies: "",
+      name: "",
+      email: "",
+      password: "",
+      phone: "",
+      address: "",
+      namepet: "",
+      gender: "",
+      species: 0,
+      age: ""
+    };
+  }
+
+  handleRegister = () => {
+    const data = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      phone: this.state.phone,
+      address: this.state.address,
+      pet: {
+        name: this.state.petName,
+        gender: this.state.gender,
+        species: this.state.selectedSpecies,
+        age: this.state.age
+      }
+    };
+    // console.log(data);
+    this.props.register(data);
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+    
+  };
+
+  handleClose = () => {
+    this.setState({ isopen: false });
+  };
+  render() {
+    const { species } = this.props;
+    // console.log("test Data",species.data);
+    console.log(this.state.name);
+    
+    
+    
     return (
       <Fragment>
-        <Button onClick={() => setRegister(true)} className='default-btn' size="sm" variant="dark">Register</Button>
-        <Modal size="sm" show={Register} onHide={() => setRegister(false)} style={{maxHeight:"600px"}} scrollable centered>
+        <Button onClick={() => this.setState({ isopen: true })} className='default-btn' size="sm" variant="dark">Register</Button>
+        <Modal size="sm" show={this.state.isopen} onHide={this.handleClose} style={{maxHeight:"600px"}} scrollable centered>
         <Modal.Header closeButton>
           <Modal.Title id="modal-sizes-title-sm">
             Register
@@ -20,37 +76,44 @@ export default function LoginModal() {
         <Modal.Body>
         <Form>
           <Form.Group controlId="Breeder">
-            <Form.Control type="text" placeholder="Breeder" />
+            <Form.Control type="text" placeholder="Breeder" onChange={e =>this.setState({ name: e.target.value })}/>
           </Form.Group>
           <Form.Group controlId="email">
-            <Form.Control type="email" placeholder="Email" />
+            <Form.Control type="email" placeholder="Email" onChange={e =>this.setState({ email: e.target.value })}/>
           </Form.Group>
           <Form.Group controlId="Password">
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="Password" onChange={e =>this.setState({ password: e.target.value })}/>
           </Form.Group>
           <Form.Group controlId="Phone">
-            <Form.Control type="text" placeholder="Phone Number" />
+            <Form.Control type="text" placeholder="Phone Number" onChange={e =>this.setState({ phone: e.target.value })}/>
           </Form.Group>
           <Form.Group controlId="Address">
-            <Form.Control type="text" placeholder="Address" />
+            <Form.Control type="text" placeholder="Address" onChange={e =>this.setState({ address: e.target.value })}/>
           </Form.Group>
           <Form.Group controlId="Pet Name">
-            <Form.Control type="text" placeholder="Pet Name" />
+            <Form.Control type="text" placeholder="Pet Name"  onChange={e =>this.setState({ petName: e.target.value })}/>
           </Form.Group>
           <Form.Group controlId="Pet Gender">
-            <Form.Control type="text" placeholder="Pet Gender" />
+            <select onChange={e =>this.setState({ gender: e.target.value })}>
+              <option></option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
           </Form.Group>
           <Form.Group controlId="Pet Species">
-            <Form.Control as="select" >
-              <option selected disabled>Pet Species</option>
-              <option>Dog</option>
-              <option>Cat</option>
-              <option>Lizard</option>
-              <option>Bird</option>
-            </Form.Control>
+            <select onChange={e =>this.setState({ selectedSpecies: e.target.value })}>
+              <option>Species</option>
+              {species.data.map(item => {
+                return <option key={item.id} value={item.id} >{item.name}</option>;
+              })}
+            </select>
           </Form.Group>
           <Form.Group controlId="Pet Age">
-            <Form.Control type="text" placeholder="Pet Age" />
+            <select onChange={e =>this.setState({ age: e.target.value })}>
+              <option></option>
+              <option>Adult</option>
+              <option>Teen</option>
+            </select>
           </Form.Group>
           <Form.Group controlId="RememberMe">
             <Form.Check type="checkbox" label="Agree to the terms of service" />
@@ -58,11 +121,30 @@ export default function LoginModal() {
         </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className='.default-btn' variant="secondary" type="submit" size="sm" href='/index' block>
-          Register
-          </Button>
+            <Button onClick={this.handleRegister} className='.default-btn' variant="secondary" type="submit" size="sm" block>
+              Register
+            </Button>
         </Modal.Footer>
       </Modal>
       </Fragment>
     );
-}
+}}
+
+const mapStateToProps = state => {
+  return {
+    species: state.species,
+    auth: state.auth
+  };
+};
+
+const mapDispatchToProps = dispacth => {
+  return {
+    getSpecies: () => dispacth(getSpecies()),
+    register: data => dispacth(register(data))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(RegisterModal);

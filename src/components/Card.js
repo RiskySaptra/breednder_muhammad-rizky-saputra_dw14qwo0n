@@ -10,7 +10,7 @@ import { MdLocationOn } from 'react-icons/md';
 class Card extends React.Component {
   render() {
     const { i, x, y, rot, scale, trans, bind, data } = this.props;
-    const { name, age, distance, breeder, pics } = data[i];
+    const { name, distance, breeder, pics } = data[i];
 
     return (
       <>

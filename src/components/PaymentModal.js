@@ -2,8 +2,7 @@ import React, {Fragment,useState} from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Button,Modal,Form,Container} from 'react-bootstrap';
-import { BrowserRouter as Link } from "react-router-dom";
+import { Button,Modal,Form} from 'react-bootstrap';
 
 
 export default function PaymentModal() {

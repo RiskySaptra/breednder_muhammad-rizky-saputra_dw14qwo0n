@@ -11,7 +11,7 @@ export default [
     pics: ["/2.jpeg"],
     name: "Chloe",
     gender: 18,
-    distance: "1 mile away",
+    distance: "1",
     breeder: 'Afdool'
   },
   {
@@ -32,7 +32,7 @@ export default [
     pics: ["/5.jpeg"],
     name: "Mr.Clean",
     gender: 18,
-    distance: "1 mile away",
+    distance: "1",
     breeder: 'Dave'
   },
   {
@@ -53,7 +53,7 @@ export default [
     pics: ["/8.jpeg"],
     name: "Persik",
     gender: 18,
-    distance: "1 mile away",
+    distance: "1",
     breeder:'Tzu Yu'
   },
   {
