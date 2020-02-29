@@ -1,18 +1,13 @@
 import React from "react";
-import Landing from "./page/Landing";
-import Index from "./page/Index";
-import Profile from "./page/Profile";
+import Landing from './page/Landing';
+import Index from './page/Index';
+import Profile from './page/Profile';
 
 import { connect } from "react-redux";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect
-} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route,Redirect} from "react-router-dom";
 
-import { login } from "./_actions/auth";
+import { getAuth } from "./_actions/auth";
 
 class App extends React.Component {
   componentDidMount() {
@@ -54,7 +49,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    autoAuth: () => dispatch(login())
+    autoAuth: () => dispatch(getAuth())
   };
 };
 

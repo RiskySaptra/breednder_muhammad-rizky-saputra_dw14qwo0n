@@ -62,7 +62,7 @@ function Deck() {
     }
   );
 
-  return props.map(({ x, y, rot, scale }, i) => (
+  return props.map(({ x, y, rot, scale}, i) => (
     <Card
       i={i}
       x={x}

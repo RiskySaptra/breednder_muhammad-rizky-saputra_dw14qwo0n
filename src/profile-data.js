@@ -4,6 +4,7 @@ export default [
     name: "Mr.Doug",
     gender: "Boi",
     distance: "4 miles away",
-    breeder: "Risky"
+    breeder:'Risky'
   }
+
 ];
